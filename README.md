@@ -1,59 +1,39 @@
-# Passwordgenerator
+# Password Generator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+## Overview
+This is a simple and lightweight password generator built with **Angular 19** and **Bootstrap 5.3.3**. It allows users to generate secure passwords with customizable length and character options.
 
-## Development server
+## Features
+- Generate random passwords instantly
+- Customize password length
+- Include/exclude uppercase letters, numbers, and special characters
+- Responsive and user-friendly UI
 
-To start a local development server, run:
+## Technologies
+- **Angular 19** - FrontEnd Framework
+- **Bootstrap 5.3.3** - UI Styling and Responsiveness
+- 
+## 📂 Project Setup
+Follow these steps to set up and run the project:
 
+### 1- Clone the Repository
+```bash
+git clone https://github.com/hashylog/passwordgenerator.git
+cd passwordgenerator
+```
+
+### 2- Install Dependencies
+```bash
+npm install
+```
+
+### 3- Run the Development Server
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## How to Use
+1- Select the desired password length.
+2- Choose character options (include Letters by default).
+3- Click **Generate**.
+4- Copy and use your secure password!
