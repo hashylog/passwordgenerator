@@ -12,7 +12,7 @@ This is a simple and lightweight password generator built with **Angular 19** an
 ## Technologies
 - **Angular 19** - FrontEnd Framework
 - **Bootstrap 5.3.3** - UI Styling and Responsiveness
-- 
+
 ## 📂 Project Setup
 Follow these steps to set up and run the project:
 
