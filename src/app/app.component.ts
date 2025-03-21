@@ -11,6 +11,11 @@ import { Clipboard } from 'ts-clipboard';
 
 export class AppComponent {
 
+  constructor() {
+    // Light and Dark Theme Switch
+    document.documentElement.setAttribute('data-bs-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
+
   slidervalue = 1;
   public letters = false;
   public uppercase = false;
