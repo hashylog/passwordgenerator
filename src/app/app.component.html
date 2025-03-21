@@ -36,7 +36,7 @@
         <!-- Password Field -->
         <div class="d-flex">
           <input [value]="passwordvalue" class="form-control me-3" type="text" readonly/>
-          <button class="btn btn-primary" type="button">Copy</button>
+          <button (click)="CopyText(passwordvalue)" class="btn btn-primary" type="button">Copy</button>
         </div>
 
         <br/>

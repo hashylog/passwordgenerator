@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Clipboard } from 'ts-clipboard';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,8 @@ export class AppComponent {
     
     let password = "";
     let characters = "";
+
+    if (this.slidervalue <= 0) { this.slidervalue = 1; }
     
     if (this.uppercase) { characters += this.uppercasechars; }
     if (this.lowercase) { characters += this.lowercasechars; }
@@ -46,8 +49,9 @@ export class AppComponent {
 
   }
 
-  UpdateValue(event: Event)
-  {
+  CopyText(text : string) { Clipboard.copy(text); }
+
+  UpdateValue(event: Event) {
     const inputelement = event.target as HTMLInputElement;
     this.slidervalue = inputelement.valueAsNumber;
   }
