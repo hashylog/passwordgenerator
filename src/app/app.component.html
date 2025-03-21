@@ -1,0 +1,91 @@
+<!-- Header NavBar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Password Generator</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- Header NavBar -->
+
+
+<main class="container-fluid">
+  
+  <!-- Title -->
+  <h1 class="p-5 text-center" style="font-size: 50px;">Password Generator</h1>
+  
+  <!-- Main -->
+  <div class="d-flex justify-content-center">
+    
+    <div class="card" style="width: 810px;">
+
+      <div class="card-body">
+        
+        <!-- Password Field -->
+        <div class="d-flex">
+          <input [value]="passwordvalue" class="form-control me-3" type="text" readonly/>
+          <button class="btn btn-primary" type="button">Copy</button>
+        </div>
+
+        <br/>
+
+        <div class="d-flex justify-content-between">
+          <!-- Slider -->
+          <div>
+            <label for="customRange5" class="form-label">Lenght:</label>
+            <div class="d-flex align-items-center">
+              <div class="form-outline me-3" style="width: 100px;"> <input (input)="UpdateValue($event)" type="number" [value]="slidervalue" id="typeNumber" min="1" max="50" class="form-control"/> </div>
+              <input (input)="UpdateValue($event)" type="range" [value]="slidervalue" class="form-range" min="1" max="50" step="1" id="customRange3">
+            </div>
+          </div>
+          
+          <!-- Checkbox's -->
+          <div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" disabled checked>
+              <label class="form-check-label" for="flexCheckDefault">Include Letters</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" [(ngModel)]="uppercase" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">Include Uppercase</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" [(ngModel)]="lowercase" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">Include Lowercase</label>
+            </div>
+          </div>
+          
+          <div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" [(ngModel)]="numbers" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">Include Numbers</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" [(ngModel)]="symbols" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">Include Symbols</label>
+            </div>
+          </div>
+
+        </div>
+        
+        <br/>
+
+        <button type="button" (click)="GeneratePassword()" class="btn btn-primary w-100">Generate</button>
+
+      </div>
+    </div>
+  </div>
+    
+</main>
